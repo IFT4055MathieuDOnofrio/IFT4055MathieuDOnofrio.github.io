@@ -6,6 +6,8 @@ In the domain of reinforcement learning (RL), an agent learns optimal decision-m
 
 This project aims to derive a universal reward function that can effectively accommodate agents with various morphologies—a significant challenge given the complex nature of designing "properly shaped" reward functions. We are exploring the use of a transformer architecture to formulate this reward function. Our approach involves training a policy for one morphology using data from another in-domain morphology with distinct dynamics, thus addressing major challenges in reward and policy generalization across different agent forms.
 
+There is a strong motivation in enhacing safety in RL. With this method, we may be able to transfer the constrants or rules governing a set of agents to a different kind of agent.
+
 ## Reports
 
 Some of the dates may not be entirely accurate, since I estimated them from my notes and memory.
@@ -13,6 +15,8 @@ Some of the dates may not be entirely accurate, since I estimated them from my n
 ### 4/29/2023
 
 Task: Prepare presentation and finalize report.
+
+Implemented a heterogeneous transformer architectures
 
 ### 4/21/2024
 
