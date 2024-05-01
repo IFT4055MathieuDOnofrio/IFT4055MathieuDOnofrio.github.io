@@ -7,6 +7,81 @@
     <style>
         body { font-family: Arial, sans-serif; }
         .hidden { display: none; }
+
+        /* General body styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* center h1 and button */
+        h1 {
+            text-align: center;
+        }
+      
+        /* Header and titles */
+        h1, h2, h3 {
+            color: #333;
+        }
+      
+        /* Container for content */
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+      
+        /* Style for navigation and language switch button */
+        button {
+            background-color: #5c67f2;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+      
+        button:hover {
+            background-color: #4a54e1;
+        }
+      
+        /* Link styles */
+        a {
+            color: #5c67f2;
+            text-decoration: none;
+        }
+      
+        a:hover {
+            text-decoration: underline;
+        }
+      
+        /* List styles */
+        ul {
+            padding-left: 20px;
+        }
+      
+        li {
+            margin-bottom: 10px;
+        }
+      
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .content {
+                margin: 10px;
+                padding: 10px;
+            }
+          
+            button {
+                padding: 8px 16px;
+            }
+        }
     </style>
 </head>
 <body>
