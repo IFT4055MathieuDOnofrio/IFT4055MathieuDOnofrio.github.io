@@ -84,12 +84,13 @@
         }
     </style>
 </head>
-<body>
-    <h1>Inverse Reinforcement Learning with Multiple Morphologies</h1>
-    <button onclick="toggleLanguage()">Switch Language</button>    
+<body> 
     <div id="english" class="content">
+        <h1>Inverse Reinforcement Learning With Multiple Morphologies</h1>
+        <button onclick="toggleLanguage()">Switch Language</button>    
         <a href="presentation.pptx">Presentation Slides</a>
-        <a href="repport.pptx">Final Report</a>
+        <br>
+        <a href="rapport.pdf">Final Report</a>
 
         <h2>Project Description</h2>
         <p>In the domain of reinforcement learning (RL), an agent learns optimal decision-making by interacting with an environment, guided by a specific reward signal. However, explicitly defining or even determining a reward function in real-world applications can be challenging. Inverse reinforcement learning (IRL) seeks to infer this reward function based on observed behavior.</p>
@@ -98,12 +99,12 @@
         
         <h2>Reports</h2>
         <p>Some of the dates may not be entirely accurate, since I estimated them from my notes and memory.</p>
-        
-        <!-- Detailed reports here -->
-        <!-- Continue to include your specific report entries as structured below -->
-        
+
+        <h3>5/6/2023</h3>
+        <p>Task: Finalize report.</p>
+                
         <h3>4/29/2023</h3>
-        <p>Task: Prepare presentation and finalize report.</p>
+        <p>Task: Prepare presentation and repport</p>
         <p>Implemented a heterogeneous transformer architectures</p>
         
         <h3>4/21/2024</h3>
@@ -168,7 +169,87 @@
     </div>
     
     <div id="french" class="content hidden">
-
+        <h1>Apprentissage par renforcement inverse avec plusieurs morphologies</h1>
+        <button onclick="toggleLanguage()">Changer de langue</button>
+        <a href="presentation.pptx">Diapositives de présentation</a>
+        <br>
+        <a href="rapport.pdf">Rapport final</a>
+            
+        <h2>Description du projet</h2>
+        <p>Dans le domaine de l'apprentissage par renforcement (RL), un agent apprend à prendre des décisions optimales en interagissant avec un environnement, guidé par un signal de récompense spécifique. Cependant, définir explicitement ou même déterminer une fonction de récompense dans des applications réelles peut être difficile. L'apprentissage par renforcement inverse (IRL) cherche à inférer cette fonction de récompense à partir du comportement observé.</p>
+        <p>Ce projet vise à dériver une fonction de récompense universelle qui peut accommoder efficacement des agents avec différentes morphologies — un défi significatif étant donné la complexité de la conception de fonctions de récompense "correctement formées". Nous explorons l'utilisation d'une architecture de transformateur pour formuler cette fonction de récompense. Notre approche implique de former une politique pour une morphologie en utilisant des données d'une autre morphologie du même domaine avec des dynamiques distinctes, abordant ainsi les principaux défis de généralisation de récompense et de politique à travers différentes formes d'agents.</p>
+        <p>Il y a une forte motivation pour améliorer la sécurité dans RL. Avec cette méthode, nous pourrions être en mesure de transférer les contraintes ou les règles régissant un ensemble d'agents à un type différent d'agent.</p>
+            
+        <h2>Rapports</h2>
+        <p>Certaines dates peuvent ne pas être tout à fait exactes, car je les ai estimées à partir de mes notes et de ma mémoire.</p>
+            
+        <h3>5/6/2023</h3>
+        <p>Tâche : Finaliser le rapport.</p>
+            
+        <h3>4/29/2023</h3>
+        <p>Tâche : Préparer la présentation et le rapport</p>
+        <p>Implémentation d'architectures de transformateurs hétérogènes</p>
+            
+        <h3>4/21/2024</h3>
+        <p>Tâche : Poursuivre les expériences finales.</p>
+            
+        <h3>4/15/2024</h3>
+        <p>Tâche : Expérimentations en cours avec ajustements de l'architecture pour une performance et une stabilité améliorées.</p>
+        <p>Défis :</p>
+        <ul>
+            <li>L'IRL-ML avec la récompense basée sur le transformateur, lorsqu'elle est entraînée sur une seule morphologie, fonctionne environ 30% moins bien que la récompense basée sur MLP.</li>
+            <li>Des problèmes de stabilité persistent avec la récompense du transformateur, malgré divers ajustements expérimentaux.</li>
+            <li>Lorsqu'appliquée à plusieurs morphologies, la récompense du transformateur est inférieure d'environ 38% par rapport aux benchmarks d'experts.</li>
+            <li>Le transfert de récompense utilisant le modèle de transformateur échoue à converger, même pour les morphologies familières.</li>
+        </ul>
+        <p>Réalisations :</p>
+        <ul>
+            <li>Résolution des problèmes liés à la taille du modèle de transformateur, augmentant considérablement les performances.</li>
+            <li>Améliorations de la stabilité observées lorsque la récompense du transformateur est appliquée à plusieurs morphologies.</li>
+            <li>Les architectures complètes de transformateur et les configurations seulement avec l'encodeur de transformateur montrent des résultats prometteurs, cette dernière étant bénéfique pour l'IRL-ML basé uniquement sur l'état et les applications potentielles d'apprentissage par transfert.</li>
+        </ul>
+        
+        <h3>4/8/2024</h3>
+        <p>Tâche : Implémentation de l'architecture initiale du transformateur inspirée par AnyMorph et début des expériences principales.</p>
+        <p>Implémentation de l'architecture initiale du transformateur basée sur AnyMorph et début des expériences principales.</p>
+        <p>Observations :</p>
+        <ul>
+            <li>Les modèles de récompense MLP correspondent étroitement aux retours des experts, mais présentent des fluctuations et des échecs sporadiques.</li>
+            <li>La boucle de rétroaction IRL-ML était particulièrement sensible à la taille du modèle de transformateur, nécessitant des ajustements considérables.</li>
+        </ul>
+        
+        <h3>4/1/2024</h3>
+        <p>Avec l'aide d'Adriana, une des étudiantes de Glen, résolution des problèmes avec la bibliothèque Tianshou affectant les modifications de récompense.</p>
+        
+        <h3>3/18/2024</h3>
+        <p>Rencontre d'un obstacle majeur alors que l'algorithme IRL-ML semblait ignorer la fonction de récompense modifiée et s'appuyait sur les récompenses originales.</p>
+        
+        <h3>3/11/2024</h3>
+        <p>Mise en œuvre et formation des politiques Soft Actor-Critic (SAC) pour diverses morphologies et début de l'intégration de l'algorithme IRL-ML dans notre base de code.</p>
+        
+        <h3>3/4/2024</h3>
+        <p>Intégration des environnements ModularRL dans notre base de code, les adaptant pour la dernière version de Gymnasium.</p>
+        
+        <h3>2/26/2024</h3>
+        <p>Revue du papier IRL-ML et mise en place d'un environnement de travail dans le laboratoire de Glen pour l'entraînement à distance des modèles. Choix de développer notre implémentation IRL-ML from scratch au lieu d'utiliser une base de code non maintenue.</p>
+        <a href="https://arxiv.org/abs/2210.01282">Papier IRL-ML</a>
+        
+        <h3>2/5/2024</h3>
+        <p>Revue de la littérature sur la politique unique-multiples morphologies incluant le papier AnyMorph.</p>
+        <ul>
+          <li><a href="https://arxiv.org/abs/2010.01856">AnyMorph</a></li>
+          <li><a href="https://arxiv.org/abs/2007.04976">Politiques modulaires partagées</a></li>
+          <li><a href="https://arxiv.org/abs/2007.04976">Amorpheus</a></li>
+        </ul>
+        
+        <h3>Début du semestre</h3>
+        <p>Dédié du temps à identifier un projet adapté, je me suis plongé dans divers concepts de l'apprentissage par renforcement (RL) et de l'apprentissage par renforcement profond (Deep RL).
+           De plus, j'ai exploré des cadres et des bibliothèques populaires, incluant Gymnasium.</p>
+        
+        <p>
+          Finalement, nous avons décidé de poursuivre un projet qui intègre l'apprentissage par renforcement inverse à maximum de vraisemblance (IRL-ML) 
+          avec une architecture de transformateur agnostique à la morphologie, connue sous le nom d'AnyMorph.</p>
+        
     </div>
 
     <script>
